@@ -5,6 +5,9 @@ public class Euler2
 	long acc = 0;
 	long fib1 = 1;
 	long fib2 = 2;
+	long start = System.nanoTime(); // requires java 1.5
+
+
 	while(fib1<4000000)
             {
 		long aux = fib2;
@@ -15,6 +18,9 @@ public class Euler2
 			acc +=fib1;
                     }
             }
-	System.out.println("Result= "+acc);
+	// Segment to monitor
+	double elapsedTimeInSec = (System.nanoTime() - start) * 1.0e-9;
+	System.out.println("Result= "+acc+", in "+elapsedTimeInSec+" seconds.");
+
     }
 }
